@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n+Vkpv5kSiyIy7k80lV+qcXHrlAJJPmWxzoWRGXZEvkT5QpybXmAbroRwTlwOdnvVY9lfzjABxqQBNhNg2vr0A==",
+  "dgSpecHash": "bbI2myaFy0K4/LT85fsbMTN7fVpWxAk4WcF9eLoioRW0FuQniB6jqDVt7yHsibg18q21Ss0HUEdqgnOwHaKc9A==",
   "success": true,
-  "projectFilePath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back\\portifolio-back.csproj",
+  "projectFilePath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gostavo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Gostavo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

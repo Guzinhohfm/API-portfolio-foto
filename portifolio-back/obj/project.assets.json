@@ -1503,11 +1503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back\\portifolio-back.csproj",
+      "projectUniqueName": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back.csproj",
       "projectName": "portifolio-back",
-      "projectPath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back\\portifolio-back.csproj",
+      "projectPath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back.csproj",
       "packagesPath": "C:\\Users\\Gostavo\\.nuget\\packages\\",
-      "outputPath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\portifolio-back\\obj\\",
+      "outputPath": "C:\\ESTUDOS\\projetos\\projeto1\\portifolio-foto\\portifolio-back\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gostavo\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -19,17 +19,17 @@ public class FotoController : ControllerBase
     }
 
     [HttpPost]
-   public IActionResult AdicionaFoto([FromBody] Foto foto)
+    public IActionResult AdicionaFoto([FromBody] Foto foto)
     {
         _context.Fotos.Add(foto);
         _context.SaveChanges();
-        return CreatedAtAction(nameof(RecuperarFotoPorId), 
-          new {id =  foto.Id}
+        return CreatedAtAction(nameof(RecuperarFotoPorId),
+          new { id = foto.Id }
         , foto);
     }
 
     [HttpGet]
-    public IEnumerable<Foto> RecuperarFotosGeral([FromQuery]int take = 10)
+    public IEnumerable<Foto> RecuperarFotosGeral([FromQuery] int take = 10)
     {
         return _context.Fotos.Take(take);
     }
@@ -39,9 +39,32 @@ public class FotoController : ControllerBase
     //interrogação significa que pode ou não ser nulo o valor de foto
     public IActionResult RecuperarFotoPorId(int id)
     {
-        var foto =  _context.Fotos.FirstOrDefault(foto => foto.Id == id);
+        var foto = _context.Fotos.FirstOrDefault(foto => foto.Id == id);
 
         if (foto == null) return NotFound();
         return Ok(foto);
+    }
+
+    [HttpDelete("{id}")]
+
+    public IActionResult RemoverFotoPorId(int id)
+    {
+
+        var foto = _context.Fotos.FirstOrDefault(foto => foto.Id == id);
+
+        if (foto == null )
+        {
+            return NotFound();
+          
+        }
+        else
+        {
+            _context.Fotos.Remove(foto);
+            _context.SaveChanges();
+            return Ok(foto);
+        }
+
+        
+        
     }
 }
