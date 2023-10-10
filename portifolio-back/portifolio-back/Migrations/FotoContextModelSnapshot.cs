@@ -6,46 +6,45 @@ using portifolio_back.Data;
 
 #nullable disable
 
-namespace portifolio_back.Migrations
+namespace portifolio_back.Migrations;
+
+[DbContext(typeof(FotoContext))]
+partial class FotoContextModelSnapshot : ModelSnapshot
 {
-    [DbContext(typeof(FotoContext))]
-    partial class FotoContextModelSnapshot : ModelSnapshot
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+        modelBuilder
+            .HasAnnotation("ProductVersion", "7.0.11")
+            .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("portifolio_back.Models.Foto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("portifolio_back.Models.Foto", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    b.Property<string>("Arquivo64Foto")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Arquivo64Foto")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("DescricaoFoto")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("varchar(500)");
+                b.Property<string>("DescricaoFoto")
+                    .IsRequired()
+                    .HasMaxLength(500)
+                    .HasColumnType("varchar(500)");
 
-                    b.Property<string>("TamanhoFoto")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("TamanhoFoto")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("TituloFoto")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("TituloFoto")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Fotos");
-                });
+                b.ToTable("Fotos");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }
