@@ -47,7 +47,7 @@ public class FotoController : ControllerBase
 
     [HttpDelete("{id}")]
 
-    public IActionResult RemoverFotoPorId(int id)
+    public IActionResult RemoverFotoPorId(int id)   
     {
 
         var foto = _context.Fotos.FirstOrDefault(foto => foto.Id == id);
