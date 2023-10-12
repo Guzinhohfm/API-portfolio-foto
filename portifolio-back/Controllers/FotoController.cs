@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using portifolio_back.Data;
 using portifolio_back.Models;
+using System.IO;
+
 
 namespace portifolio_back.Controllers;
 
@@ -21,6 +25,7 @@ public class FotoController : ControllerBase
     [HttpPost]
     public IActionResult AdicionaFoto([FromBody] Foto foto)
     {
+   
         _context.Fotos.Add(foto);
         _context.SaveChanges();
         return CreatedAtAction(nameof(RecuperarFotoPorId),
@@ -64,7 +69,9 @@ public class FotoController : ControllerBase
             return Ok(foto);
         }
 
-        
+      
         
     }
+
+    
 }
