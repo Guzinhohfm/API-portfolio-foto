@@ -32,6 +32,7 @@ export default function Table(props){
                             <button className='btn btn-primary'>Editar</button>{"   "} 
 
                             <button className='btn btn-danger' onClick={ ()=>deletarFotoPeloId(foto.id) }> Excluir </button>
+                            {/* inserir confirmação de delete */}
                             </td> 
                         </tr>
                     ))}

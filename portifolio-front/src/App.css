@@ -1,5 +1,14 @@
 html, body{
   min-width: 100%;
   min-height: 100%;
-  background-color: black;
+  background-color: rgb(43, 41, 41);
+}
+
+.title{
+  color: white;
+
+}
+
+.container-app{
+  margin: 0, auto;
 }

@@ -2,8 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 import Modal from './components/Modal/Modal'
 import { useState, useEffect } from 'react'
-import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import Table from './components/Table/Table'
+import '../src/App.css'
 
 export default function App(){
 
@@ -20,8 +21,6 @@ export default function App(){
         })
     }
 
-
-
     const pedidoDelete=async(fotoId)=>{
             await axios.delete(`${baseUrl}/${fotoId}`)
             .then(response =>{
@@ -32,6 +31,7 @@ export default function App(){
             })
     }
 
+    
 
     const [modalIncluir, setModalIncluir]=useState(false)
 
@@ -55,12 +55,12 @@ export default function App(){
     }
 
     return(
-        <div > 
+        <div className='container-app'> 
             <h1 className='title'>Portifólio de fotos</h1>
-            <Header AbrirModal={abrirFecharModalIncluir}></Header>
             <Table data={data} deletarFoto={pedidoDelete}></Table>
             {/* prompt de inclusão nova foto */}
             <Modal IsOpen={modalIncluir} fecharModal={abrirFecharModalIncluir}  fotoAdicionada={recebeFoto} ></Modal>
+            <Footer AbrirModal={abrirFecharModalIncluir}></Footer>
         </div>
     )
 }

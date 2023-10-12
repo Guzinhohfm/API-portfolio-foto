@@ -8,28 +8,38 @@ export default function Prompt(props){
     const [fotoSelecionado, setFotoSelecionado]=useState({
         tituloFoto: "",
         descricaoFoto: "",
-        tamanhoFoto: "",
+        tamanhoFoto: "200x200",
         arquivo64Foto: ""
     })
 
     
     const handleChange=  e=>{
         const {name, value} = e.target;
-
-        setFotoSelecionado({
-            ...fotoSelecionado,[name]:value
-        });
-        console.log(fotoSelecionado)
-        
+      
+        if(e.target.name == "arquivo64Foto"){
+            let file = e.target.files;
+            let reader = new FileReader();
+            reader.readAsDataURL(file[0])
+            reader.onload = (e) =>{
+                let fotoBase64 = e.target.result
+                setFotoSelecionado({
+                    ...fotoSelecionado,[name]:fotoBase64
+                })
+            }
+           
+        } else {
+            setFotoSelecionado({
+                ...fotoSelecionado,[name]:value
+            });
+        }
+    
     }
+
 
     function enviaFoto(){
         props.fotoAdicionada(fotoSelecionado)
     }
 
-
-
-  
 
     return(
         <div>
@@ -44,9 +54,9 @@ export default function Prompt(props){
                         <label>Descrição:</label>
                         <input type="text" className='form-control' name='descricaoFoto' onChange={handleChange}/>
                         <br></br>
-                        <label>Tamanho:</label>
+                        {/* <label>Tamanho:</label>
                         <input type="text" className='form-control'  name='tamanhoFoto' onChange={handleChange}/>
-                        <br></br>
+                        <br></br> */}
                         <label>Arquivo:</label>
                         <input type="file" className='form-control' name='arquivo64Foto' onChange={handleChange} />
                         <br></br>
