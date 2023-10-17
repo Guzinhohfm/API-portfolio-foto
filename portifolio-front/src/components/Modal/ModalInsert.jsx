@@ -8,7 +8,7 @@ export default function Prompt(props){
     const [fotoSelecionado, setFotoSelecionado]=useState({
         tituloFoto: "",
         descricaoFoto: "",
-        tamanhoFoto: "200x200",
+        tamanhoFoto: "250x250",
         arquivo64Foto: ""
     })
 
@@ -32,12 +32,13 @@ export default function Prompt(props){
                 ...fotoSelecionado,[name]:value
             });
         }
-    
+
     }
 
 
     function enviaFoto(){
         props.fotoAdicionada(fotoSelecionado)
+        
     }
 
 

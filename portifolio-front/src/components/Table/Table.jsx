@@ -2,8 +2,14 @@ import Image from '../Image/Image'
 
 export default function Table(props){
 
-    function deletarFotoPeloId(fotoId){
-        props.deletarFoto(fotoId)
+    function selecionarFoto(foto){
+        props.fotoSelecionada(foto)
+
+    }
+
+    function editarFoto(foto){
+        props.fotoSelecionadaEditar(foto)
+
     }
 
 
@@ -20,7 +26,6 @@ export default function Table(props){
                     </tr>
                 </thead>
                 <tbody>
-                    
                     {/*mapeando os dados retornados no response*/}
                     {props.data.map(foto=>(
                         <tr key={foto.id}>
@@ -29,14 +34,16 @@ export default function Table(props){
                             <td>{foto.tamanhoFoto}</td>
                             <td><Image arquivo={foto.arquivo64Foto}></Image></td>
                             <td>
-                            <button className='btn btn-primary'>Editar</button>{"   "} 
+                            <button className='btn btn-primary' onClick={()=>editarFoto(foto)}>Editar</button>{"   "} 
 
-                            <button className='btn btn-danger' onClick={ ()=>deletarFotoPeloId(foto.id) }> Excluir </button>
+                            <button className='btn btn-danger'  onClick={()=>selecionarFoto(foto)}>Excluir</button>
+                            
                             {/* inserir confirmação de delete */}
                             </td> 
                         </tr>
                     ))}
                 </tbody>
+                
             </table>
         </div>
     )
