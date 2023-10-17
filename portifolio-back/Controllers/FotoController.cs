@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using portifolio_back.Data;
 using portifolio_back.Models;
 using System.IO;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace portifolio_back.Controllers;
 
@@ -69,9 +69,26 @@ public class FotoController : ControllerBase
             return Ok(foto);
         }
 
-      
+       
         
     }
 
-    
+    [HttpPut("{id}")]
+    public  IActionResult EditarFoto(int id, [FromBody]Foto foto)
+    {
+        if (foto.Id == id)
+        {
+            _context.Fotos.Update(foto);
+            _context.SaveChanges();
+            return Ok("Os dados foram atualizados com sucesso") ;
+        }
+        else
+        {
+            return BadRequest("Não encontrado dados");
+        }
+  
+    }
+
+
+
 }
