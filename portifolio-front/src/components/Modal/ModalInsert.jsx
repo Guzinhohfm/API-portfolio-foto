@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 
-export default function Prompt(props){
+export default function ModalInsert(props){
 
     const [fotoSelecionado, setFotoSelecionado]=useState({
         tituloFoto: "",
@@ -63,6 +63,7 @@ export default function Prompt(props){
                         <br></br>
 
                         <ModalFooter>
+                        <img src='../src/assets/insertpicture.png' alt='insert-picture' style={{width:200, height:200}}></img>
                             <button className='btn btn-primary'onClick={()=>enviaFoto()}>Incluir</button>{"   "}
                             <button className='btn btn-danger' onClick={props.fecharModal}>Cancelar</button>
                         </ModalFooter>

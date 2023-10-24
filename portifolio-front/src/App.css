@@ -1,11 +1,13 @@
 html, body{
   min-width: 100%;
   min-height: 100%;
-  background-color: rgb(43, 41, 41);
+  background-color: rgb(168, 163, 163);
 }
 
 .title{
-  color: white;
+  color: rgb(2, 2, 2);
+  display: flex;
+  justify-content: center;
 
 }
 

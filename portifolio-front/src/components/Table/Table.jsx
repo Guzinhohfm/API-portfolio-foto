@@ -15,9 +15,9 @@ export default function Table(props){
 
     return(
         <div className="table">
-            <table className='table table-striped table-dark'>
+            <table className='table table-striped'>
                 <thead>
-                    <tr>
+                    <tr className='table-success'>
                         <th>Título da foto</th>
                         <th>Descrição</th>
                         <th>Tamanho</th>
@@ -25,7 +25,7 @@ export default function Table(props){
                         <th>Ação</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='table-light'>
                     {/*mapeando os dados retornados no response*/}
                     {props.data.map(foto=>(
                         <tr key={foto.id}>
