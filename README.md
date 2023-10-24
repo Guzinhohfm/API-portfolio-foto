@@ -1,7 +1,7 @@
 # API-portfolio-foto
 
 # Sobre o projeto
-- A idéia do projeto foi criar um portfólio/galeria de fotos para que o usuário possa realizar o armazenamento, edição ou até o download de imagens de onde estiver.
+- A idéia do projeto foi criar um portfólio/galeria de fotos para que o usuário possa realizar o armazenamento ou até o download de imagens de onde estiver.
 
 # Técnologias utilizadas:
 
