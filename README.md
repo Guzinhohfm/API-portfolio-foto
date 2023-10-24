@@ -1,2 +1,22 @@
 # API-portfolio-foto
-Criação de um portfólio de fotos em que o usuário poderá fazer upload e download de suas fotos armazenadas. Utilizando as tecnologias .Net (C#) , ASP Net para o back end e React, Vite, Java Script, Bootstrap para o front end
+
+# Sobre o projeto
+- A idéia do projeto foi criar um portfólio/galeria de fotos para que o usuário possa realizar o armazenamento, edição ou até o download de imagens de onde estiver.
+
+# Técnologias utilizadas:
+
+## Front-end:
+- React
+- JSX
+- Bootstrap
+- Vite
+
+## Back-end
+- ASP.Net Core
+- .Net Framework
+- C#
+
+# Autor
+
+Gustavo Henrique Ferreira Moreira
+https://www.linkedin.com/in/gustavo-moreira-ab6b9a1bb/
